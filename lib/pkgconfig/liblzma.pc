@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: 0BSD
+# Author: Lasse Collin
+
+prefix=/Users/alexiaputellas/.src/snort/storage
+exec_prefix=/Users/alexiaputellas/.src/snort/storage
+libdir=/Users/alexiaputellas/.src/snort/storage/lib
+includedir=/Users/alexiaputellas/.src/snort/storage/include
+
+Name: liblzma
+Description: General purpose data compression library
+URL: https://tukaani.org/xz/
+Version: 5.6.3
+Cflags: -I${includedir}
+Cflags.private: -DLZMA_API_STATIC
+Libs: -L${libdir} -llzma
+Libs.private: -pthread -lpthread 

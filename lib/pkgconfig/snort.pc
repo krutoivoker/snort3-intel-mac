@@ -1,0 +1,32 @@
+prefix=/Users/alexiaputellas/.src/snort/storage
+exec_prefix=${prefix}
+bindir=${exec_prefix}/bin
+libdir=${prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+mandir=${datarootdir}/man
+infodir=${datarootdir}/info
+
+cpp_opts=DAQ LUAJIT
+cpp_opts_other=DNET HWLOC HYPERSCAN LZMA OPENSSL PCAP PCRE UUID
+
+PCAP_CPPFLAGS=-I/Users/alexiaputellas/.src/snort/storage/include
+LUAJIT_CPPFLAGS=-I/Users/alexiaputellas/.src/snort/storage/include/luajit-2.1
+DNET_CPPFLAGS=-I/Users/alexiaputellas/.src/snort/storage/include
+DAQ_CPPFLAGS=-I/Users/alexiaputellas/.src/snort/storage/include
+FLEX_CPPFLAGS=-I/Users/alexiaputellas/.src/snort/storage/include
+OPENSSL_CPPFLAGS=-I/Users/alexiaputellas/.src/snort/storage/include
+HWLOC_CPPFLAGS=
+PCRE_CPPFLAGS=-I/Users/alexiaputellas/.src/snort/storage/include
+LZMA_CPPFLAGS=
+HYPERSCAN_CPPFLAGS=
+UUID_CPPFLAGS=-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk/usr/include/uuid
+
+Name: Snort++
+Description: Snort 3.0 Project
+URL: www.snort.org
+Version: 3.5.0.0
+Libs: -L${libdir}/snort
+Cflags: -I${includedir}/snort        
+
